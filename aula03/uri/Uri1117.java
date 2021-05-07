@@ -9,15 +9,15 @@ public class Uri1117 {
 
         while (total2 != 2) {
             nota = entrada.nextFloat();
-            if (nota >= 0.0 && nota <= 10.0) {
+            if (nota >=0.0 && nota <= 10.0) {
                 total += nota;
                 total2 += 1;
             } else {
-                System.out.println("nota invalida\n");
+                System.out.print("nota invalida\n");
             }
         }
-        media = (float) total / 2;
-        System.out.printf("media = %.2f\n", media);
+        media =(float) total / 2;
+        System.out.printf("media = %.2f\n",media);
 
         entrada.close();
     }
