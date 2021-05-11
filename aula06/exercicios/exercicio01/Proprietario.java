@@ -1,9 +1,13 @@
 
 public class Proprietario {
-    private String nome;
-    private float telefone;
+    private String nome, telefone;
 
-    public void exibir() {
-        System.out.println(nome + ", " + telefone);
+    public Proprietario(String nome, String telefone) {
+        this.nome = nome;
+        this.telefone = telefone;
+    }
+
+    public String getDados() {
+        return nome + ": " + telefone;
     }
 }

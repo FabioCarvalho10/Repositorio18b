@@ -1,17 +1,18 @@
 
 public class Animal {
 
-    private String nome;
-    private String raca;
+    private String nome, raca;
     private int anoNascimento;
     private Proprietario proprietario;
 
-    public Animal() {
-        proprietario = new Proprietario();
+    public Animal(String nome, String raca, int anoNascimento, String nomeProprietario, String telefone) {
+        this.nome = nome;
+        this.raca = raca;
+        this.anoNascimento = anoNascimento;
+        proprietario = new Proprietario(nomeProprietario, telefone);
     }
 
-    public void exibir() {
-        System.out.println(nome + ", " + raca + ", " + anoNascimento);
-        proprietario.exibir();
+    public String getDados() {
+        return nome + ", " + raca + " (" + anoNascimento + ")" + ", " + proprietario.getDados();
     }
 }
