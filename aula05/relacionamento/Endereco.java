@@ -1,4 +1,3 @@
-package relacionamento;
 
 public class Endereco {
     private String logradouro;
