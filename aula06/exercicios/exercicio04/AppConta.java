@@ -1,5 +1,3 @@
-
-//import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AppConta {
@@ -85,21 +83,4 @@ public class AppConta {
         } while (opcao != 7);
         entrada.close();
     }
-
-    // Conta c = new Conta(76972);
-    // ContaCorrente c = new ContaCorrente(76972);
-    // ContaEspecial c = new ContaEspecial(12345, 100);
-    /*
-     * ContaPoupança c = new ContaPoupança(98764);
-     * 
-     * ContaPoupança.setTaxaOperacao(0.1);
-     * 
-     * if (c.deposito(100)) { System.out.println("Depósito Realizado"); } else {
-     * System.out.println("Falha na operação"); } System.out.println(c);
-     * 
-     * if (c.saque(50)) { System.out.println("Saque Realizado"); } else {
-     * System.out.println("Falha na operação"); } System.out.println(c);
-     * 
-     * }
-     */
 }
