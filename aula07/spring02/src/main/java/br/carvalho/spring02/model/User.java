@@ -7,26 +7,33 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
+@Entity // entidade mapeada no BD
 @Table(name = "usuario")
 public class User {
 
-    @Id // Indica chave primária
-    @GeneratedValue (strategy = GenerationType.IDENTITY)// Autonumerado/Autoincremento (1,2,3...)
-    @Column (name = "id")
+    @Id  // indica chave primária
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // auto numerado, 1, 2, 3, ...
+    @Column(name = "id")
     private int id;
 
-    @Column (name = "nome", length = 100, nullable = false)
+    @Column(name = "nome", length = 100, nullable = false)
     private String nome;
 
-    @Column (name = "email", length = 100, nullable = false, unique = true)
+    @Column(name = "email", length = 100, nullable = false, unique = true)
     private String email;
 
-    @Column (name = "cpf", length = 11, nullable = false, unique = true)
+    @Column(name = "cpf", length = 11, nullable = false, unique = true)
     private String cpf;
 
-    @Column (name = "senha", length = 30, nullable = false)
+    @Column(name = "senha", length = 30, nullable = false)
     private String senha;
+
+    public User() {}
+    
+    public User(String nome, String email) {
+        this.nome = nome;
+        this.email = email;
+    } 
 
     public int getId() {
         return id;
@@ -67,8 +74,4 @@ public class User {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
-
-
-
 }
