@@ -28,6 +28,7 @@ public class UserController {
         User usuario = repo.findById(id).orElse(null);
 
         if (usuario != null) {
+            usuario.setSenha("***********");
             return ResponseEntity.ok(usuario); // ok = status 200
         }
         return ResponseEntity.notFound().build(); // notFound = Erro 404

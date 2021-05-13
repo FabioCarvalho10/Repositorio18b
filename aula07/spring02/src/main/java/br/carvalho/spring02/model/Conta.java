@@ -23,7 +23,15 @@ public class Conta {
 
     @OneToOne
     @JoinColumn(name = "id_user")
-    public User usuario;
+    private User usuario;
+
+    public User getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(User usuario) {
+        this.usuario = usuario;
+    }
 
     public int getNumero() {
         return numero;
