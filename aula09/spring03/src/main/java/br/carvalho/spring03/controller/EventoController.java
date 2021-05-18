@@ -41,7 +41,7 @@ public class EventoController {
         LocalDate datafim = LocalDate.parse(datas.get("dtFim").asText(), formato);
         
         List<Evento> lista = repo.findByDataEvtBetween(dataini, datafim);
-
+        
         return lista;
     }
     @PostMapping("/group/data")
