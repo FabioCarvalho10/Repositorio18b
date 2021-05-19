@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama Academy - Contato</title>
+
+    <!-- Criando uma chamada externa da biblioteca CSS-->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+</head>
+
+<body>
+
+    <!-- Tabela para estruturar os menus superiores (Tag <table>)-->
+    <!-- Inserir linhas na tabela (Tag <tr>)-->
+    <!-- Inserir colunas na tabela (Tag <td>)-->
+    <table border="0" width="100%" class="menu">
+        <tr>
+            <td align="center"><a href="../html/index.html"><img src="../imagens/logo.png" width="160" height="40"> </a>
+            </td>
+            <td align="right">QUEM SOMOS</td>
+            <td align="right">PARA PESSOAS</td>
+            <td align="right">PARA EMPRESAS</td>
+            <td align="right">CONTATO</td>
+            <td align="right">CONTEÚDOS</td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- Criando formulário (Tag <form>)-->
+    <!-- Criando caixa para o campo do formulário (Tag <fieldset>)-->
+    <!-- Criando legenda para o formulário (Tag <legend>)-->
+    <!-- Criando caixa de texto (Tag <label>)-->
+    <!-- Criando botão para inputar as informações (Tag <input>)-->
+    <form id="contato" method="POST">
+        <fieldset>
+            <legend>Preencha o nosso formulário para realizar os nossos cursos na Gama Academy</legend>
+            <label>Nome: </label><input type="text" name="Nome_Cliente" class="campo_nome" required><br><br>
+            <label>Email: </label><input type="email" name="Email_Cliente" class="campo_email" required><br><br>
+            <label>Senha: </label><input type="password" name="Senha_Cliente" required><br><br>
+
+            <!-- Criando caixa de seleção radio-->
+            <label>Informe o Genero: </label>
+            <input type="radio" name="Genero_Cliente" value="Feminino" required> Feminino
+            <input type="radio" name="Genero_Cliente" value="Masculino" required> Masculino
+            <input type="radio" name="Genero_Cliente" value="Outros" required> Outros
+            <input type="radio" name="Genero_Cliente" value="Não Informado" required> Não Informado<br><br>
+
+            <!-- Criando caixa de seleção -->
+            <label> Escolha o curso desejado:
+                <select required>
+                    <option value="" name="Curso_Cliente"></option>
+                    <option value="HTML" name="Curso_Cliente">HTML</option>
+                    <option value="CSS" name="Curso_Cliente">CSS</option>
+                    <option value="XML" name="Curso_Cliente">XML</option>
+                    <option value="JS" name="Curso_Cliente">JavaScript</option>
+                </select>
+            </label><br><br>
+
+            <!-- Criando caixa de seleção para DATA -->
+            <label> Escolha a data que deseja realizar o curso:</label>
+            <input type="date" name="Data_Curso_Cliente" required><br><br>
+
+            <!-- Criando caixa de seleção checkbox-->
+            <label> Escolha o período que deseja realizar o curso:</label>
+            <input type="checkbox" name="Periodo_Cliente" required> Manhã
+            <input type="checkbox" name="Periodo_Cliente" required> Tarde
+            <input type="checkbox" name="Periodo_Cliente" required> Noite<br><br>
+
+            <!-- Criando campo de mensagem textarea-->
+            <label> Mensagem:</label><br>
+            <textarea name="Mensagem_Cliente" cols="37" rows=3 Maxlength="140"> </textarea><br><br>
+
+            <!-- Criando campo para envio de arquivo do tipo file-->
+            <label> Anexar por favor um comprovante de residência:</label>
+            <input type="file" name="Arquivo_Cliente" required>
+
+
+            <br><br><input type="submit" value="Enviar">
+
+
+        </fieldset>
+    </form>
+</body>
+
+</html>

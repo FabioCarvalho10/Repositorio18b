@@ -1,0 +1,66 @@
+    /*Criando uma formatação de estilos com comandos nativos do html*/
+        h1 {
+            font-size: 32px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            color: blueviolet;
+        }
+
+        p {
+            font-size: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(59, 59, 59);
+        }
+
+        /*Criando classe de estilo para ser aplicado na página*/
+        .texto_obs {
+            font-size: 12px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:darkslategrey;
+        }
+
+        .menu{
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            color:darkolivegreen  
+        }
+
+        body{
+            background-color: rgb(200, 239, 240);
+
+        }
+
+    /*Criando de classes de estilos para formulário*/
+fieldset{
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(2, 37, 2);
+}
+.campo_nome{
+    position: relative;
+    left: 15px;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:blueviolet;
+    background-color: rgb(179, 231, 179);
+    width: 240px;
+}
+.campo_email{
+    position: relative;
+    left: 15px;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:blueviolet;
+    background-color: rgb(179, 231, 179);
+    width: 280px;
+}
+
+
+
+
+
+
+
+
