@@ -66,9 +66,26 @@ fieldset{
     width: 80px;
 }
 
+/*Tipos de estilos para a página em Bootstrap*/
+.container{
+    border: 3px solid black;
+}
 
+.div1{
+    background-color: yellow;
+}
 
+.div2{
+    background-color: green;
+}
 
+.div3{
+    background-color: blue;
+}
+
+.div4{
+    background-color: red;
+}
 
 
 
