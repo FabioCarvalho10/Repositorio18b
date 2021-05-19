@@ -56,6 +56,15 @@ fieldset{
     background-color: rgb(179, 231, 179);
     width: 280px;
 }
+.campo_senha{
+    position: relative;
+    left: 10px;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:blueviolet;
+    background-color: rgb(179, 231, 179);
+    width: 80px;
+}
 
 
 
