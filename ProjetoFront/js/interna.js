@@ -10,6 +10,8 @@ function validaLogin() {
     // document.getElementById("user").innerHTML = user.nome + " <b>( " + user.cpf + " )</b>"
     // document.getElementById("user").innerHTML = user.nome + ' <b>( ' + user.cpf + ' )</b>'
     document.getElementById("user").innerHTML = `${user.nome} <b>( ${user.racf} )</b>`
+
+    listarAgentes();
 }
 
 function logout() {
@@ -17,42 +19,27 @@ function logout() {
     window.location = "index.html"
 }
 
-function listarParceiros() {
-    fetch("http://localhost:8080/user/all")
+function listarAgentes() {
+    fetch("http://localhost:8080/agente/all")
         .then(res => tratarRetorno(res))
 }
 
 function tratarRetorno(resposta) {
     if (resposta.status == 200) {
-        document.getElementById("tabela").innerHTML = "Parceiro(s) Entrontrado(s)"
-        resposta.json().then(res => exibirParceiros(res))
-    } else {
-        document.getElementById("tabela").innerHTML = "Nenhum Parceiro encontrado"
+        resposta.json().then(res => exibirAgentes(res))
+
     }
 }
+function exibirAgentes(listarAgentes) {
+    let selecao = `<option value=""></option>`;
 
-function exibirParceiros(listarParceiros) {
-    let tabela = "<table> <tr> <th>Parceiro</th> <th>Valor Transacional</th></tr>"
 
-    for (let index = 0; index < listarParceiros.length; index++) {
-        tabela = tabela + ` <tr><td>${listarParceiros[index].parceiro}</td> 
-                                <td>${listarParceiros[index].volumeTransacional}</td> </tr>`;
+    for (let index = 0; index < listarAgentes.length; index++) {
+        selecao = selecao + ` <option value="${listarAgentes[index].id}">${listarAgentes[index].nome}</option> `
 
     }
 
-    tabela = tabela + " </table>"
-    document.getElementById("tabela").innerHTML = tabela
+    document.getElementById("agente").innerHTML = selecao
 
-    montarSelecao(listarParceiros);
-}
-
-function montarSelecao(listarParceiros) {
-    let selecao = "<select>"
-
-    for (let index = 0; index < listaParceiros.length; index++) {
-        selecao = selecao + ` <option>${listaParceiros[index].nome}</option>`
-    }
-    selecao + selecao + "<select>"
-    document.getElementById("selecao").innerHTML = selecao
 
 }
