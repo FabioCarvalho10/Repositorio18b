@@ -24,6 +24,11 @@ function listarAgentes() {
         .then(res => tratarRetorno(res))
 }
 
+function listarAgentesTop10() {
+    fetch("http://localhost:8080/agente/top10")
+        .then(res => tratarRetorno(res))
+}
+
 function tratarRetorno(resposta) {
     if (resposta.status == 200) {
         resposta.json().then(res => exibirAgentes(res))

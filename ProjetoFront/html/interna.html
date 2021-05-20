@@ -27,32 +27,26 @@
     <!-- Criando uma chamada externa da biblioteca CSS-->
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
-<div class="row">
-    <div class="col-lg-5 col-md-5 col-sm-5"></div>
-    <div class="col-lg-2 col-md-2 col-sm-2">
+
+<div class="container">
+    <div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-3"></div>
+    <div class="col-lg-6 col-md-6 col-sm-6">
 
         <body onload="validaLogin()">
             <h2>Bem vindo!</h2>
             <div id="user"></div>
-            <br>
-            <button onclick="logout()" class="btn btn-primary">Logout</button>
             <br><br>
-
 
             <label> Selecione o Agente:
                 <select id="agente" required>
 
                 </select>
             </label><br><br>
-            <button onclick="confirmar()" class="btn btn-primary">Confirmar</button>
-            <br><br>
-            <button onclick="listarAgentes()">Listar TOP 10 Agentes</button>
-            <br><br>
-            <div id="tabela"></div>
-            <br>
-            <div id="selecao"></div>
+        </div>
 
-            <div class="col-lg-5 col-md-5 col-sm-5"></div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <button onclick="logout()" class="btn btn-primary">Logout</button></div>
             <form id="contato" method="POST">
 
 
